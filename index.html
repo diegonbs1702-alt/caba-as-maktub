@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citrus Patrimonial | Oportunidad de Inversión Agrícola</title>
+    <meta name="description" content="Invierta en el Oro Verde de Yucatán con la asesoría estratégica de Paola Maas. Asegure un activo tangible con rendimientos superiores.">
+    
+    <!-- Preload Hero Image for faster LCP (Responsive) -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1596733430284-f743706014a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1596733430284-f743706014a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" media="(min-width: 769px)">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Tailwind CSS (CDN para Desarrollo / Vista Previa) -->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: '#1f3027',
+                        gold: '#bb9b54',
+                        goldHover: '#a68848'
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Native Animations -->
+    <style>
+        ::selection { background-color: #bb9b54; color: #ffffff; }
+        
+        /* CSS Animations based on IntersectionObserver */
+        .anim-fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+        .anim-slide-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+        .anim-slide-right { opacity: 0; transform: translateX(40px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+        
+        .anim-fade-up.visible, .anim-slide-left.visible, .anim-slide-right.visible {
+            opacity: 1; transform: translate(0);
+        }
+
+        /* Delay utilities */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Range Slider Styling */
+        input[type=range]::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px; height: 20px;
+            background: #bb9b54;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        input[type=range]::-moz-range-thumb {
+            width: 20px; height: 20px;
+            background: #bb9b54;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* Barber Pole Progress Bar Animation */
+        .progress-bar-animated {
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+            background-size: 1rem 1rem;
+            animation: barberpole 1s linear infinite;
+        }
+        @keyframes barberpole {
+            0% { background-position: 1rem 0; }
+            100% { background-position: 0 0; }
+        }
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '834434029681370');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=834434029681370&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- Microsoft Clarity Heatmap Code -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "w4nw5awvv7");
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased overflow-x-hidden">
+
+    <!-- HEADER -->
+    <header class="w-full bg-forest z-50 shadow-xl border-b border-gold/20 relative">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-1 md:space-x-2">
+                <!-- Leaf SVG -->
+                <svg class="text-gold w-5 h-5 md:w-6 md:h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 22c1.25-.97 2.58-2.81 4-5"></path></svg>
+                <span class="text-white font-bold text-[13px] sm:text-base md:text-lg tracking-wider leading-tight">CITRUS<br class="block sm:hidden"><span class="font-light">PATRIMONIAL</span></span>
+            </div>
+            <div class="hidden md:block text-sm text-gray-300">
+                Asesoría Privada: <span class="text-gold font-semibold">Paola Maas</span>
+            </div>
+            <a href="#hero-form" class="bg-gold hover:bg-goldHover text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-bold transition-all transform hover:scale-105 flex items-center whitespace-nowrap">
+                Proyectar <span class="hidden sm:inline ml-1">Inversión</span>
+                <!-- ChevronRight SVG -->
+                <svg class="w-4 h-4 ml-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-16 md:py-24 overflow-hidden bg-forest">
+        <!-- Background Image Overlay -->
+        <div class="absolute inset-0 z-0">
+            <picture>
+                <source media="(max-width: 768px)" srcset="https://images.unsplash.com/photo-1596733430284-f743706014a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                <source media="(min-width: 769px)" srcset="https://images.unsplash.com/photo-1596733430284-f743706014a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80">
+                <img src="https://images.unsplash.com/photo-1596733430284-f743706014a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                     alt="Campos de Limón Persa en Yucatán" 
+                     class="w-full h-full object-cover opacity-20 mix-blend-overlay"
+                     decoding="async"
+                     fetchpriority="high">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-r from-forest via-forest/90 to-forest/40"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Columna Izquierda: Textos -->
+                <div class="text-left anim-slide-left">
+                    <div class="inline-block bg-gold/20 border border-gold/50 text-gold px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide mb-6 uppercase">
+                        Rendimientos 100% pasivos
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
+                        Invierte en la exportación de Limón Persa en Yucatán y
+                        <br class="hidden lg:block" /><span class="text-gold">gana en dólares</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+                        Obtenga un activo tangible que se protege de la inflación y genera utilidades sin que usted tenga que mover un dedo.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#calculator" class="w-full sm:w-auto bg-transparent border border-gold text-gold hover:bg-gold/10 px-8 py-4 rounded-full text-lg font-bold transition-all flex justify-center items-center">
+                            Calcular Mis Ganancias 
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-12 flex flex-wrap items-center gap-6 text-gray-400 text-sm">
+                        <div class="flex items-center">
+                            <!-- ShieldCheck SVG -->
+                            <svg class="w-4 h-4 mr-1 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            Protegido por Fideicomiso
+                        </div>
+                        <div class="flex items-center">
+                            <!-- Globe SVG -->
+                            <svg class="w-4 h-4 mr-1 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Inversión Local
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Formulario -->
+                <div id="hero-form" class="anim-slide-right w-full max-w-md mx-auto lg:ml-auto mt-10 lg:mt-0">
+                    <div class="bg-white rounded-3xl p-6 md:p-8 shadow-2xl relative">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-4 py-1 rounded-full font-bold shadow-lg flex items-center whitespace-nowrap text-xs md:text-sm">
+                            <svg class="w-4 h-4 mr-1.5 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Últimos 12 Certificados
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-forest mb-2 mt-2 text-center">Solicita tu Proyección</h3>
+                        <p class="text-gray-500 text-sm text-center mb-6">Asegura tu lugar en la Etapa Jaguar IV</p>
+
+                        <form id="leadForm" class="space-y-4">
+                            <input type="text" id="name" placeholder="Nombre Completo" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-gray-800 bg-gray-50" required>
+                            
+                            <div class="relative flex items-center">
+                                <span class="absolute left-4 text-gray-500 font-bold border-r border-gray-300 pr-2 pointer-events-none">+52</span>
+                                <input type="tel" id="phone" placeholder="WhatsApp" class="w-full pl-[4.5rem] pr-4 py-3 rounded-xl border border-gray-300 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all text-gray-800 bg-gray-50" required>
+                            </div>
+
+                            <select id="budget" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-gold focus:ring-2 focus:ring-gold/20 outline-none transition-all bg-gray-50 text-gray-600" required>
+                                <option value="" disabled selected>Presupuesto de inversión</option>
+                                <option value="310000">1 Certificado ($310,000 MXN)</option>
+                                <option value="620000">2 Certificados ($620,000 MXN)</option>
+                                <option value="930000">3 a 5 Cert. ($930k - $1.5M)</option>
+                                <option value="1500000">Más de 5 Cert. (+ $1.5M)</option>
+                                <option value="0">Aún evaluando</option>
+                            </select>
+
+                            <!-- Campos Ocultos para Meta CAPI -->
+                            <input type="hidden" id="eventId">
+                            <input type="hidden" id="clientIp">
+                            <input type="hidden" id="userAgent">
+                            <input type="hidden" id="fbp">
+                            <input type="hidden" id="fbc">
+                            
+                            <button type="submit" class="w-full bg-gold hover:bg-goldHover text-white px-6 py-4 rounded-xl text-lg font-bold transition-all shadow-[0_0_20px_rgba(187,155,84,0.4)] hover:shadow-[0_0_30px_rgba(187,155,84,0.6)] flex justify-center items-center group">
+                                Cotizar Inversión
+                                <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE POWER OF AGRO-INVESTMENT -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16 anim-fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-forest mb-4">¿Por qué invertir con Citrus?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Elimine el riesgo de la volatilidad financiera. La tierra agrícola es un activo resiliente con demanda global garantizada. <strong>Más de 800,000 toneladas de limón persa se exportaron a EE.UU. el año pasado, respaldando la solidez de este modelo.</strong></p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-lg transition-all anim-fade-up delay-100">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-sm mb-6">
+                        <svg class="w-10 h-10 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-forest mb-3">Demanda Global Acelerada</h3>
+                    <p class="text-gray-600">El consumo en EE.UU. crece exponencialmente. Nuestro enfoque es 100% calidad de exportación en moneda fuerte.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-lg transition-all anim-fade-up delay-200">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-sm mb-6">
+                        <svg class="w-10 h-10 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-forest mb-3">Protección Contra Inflación</h3>
+                    <p class="text-gray-600">El valor de la tierra y los alimentos históricamente supera la inflación, blindando su patrimonio de forma tangible.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-gold/30 hover:shadow-lg transition-all anim-fade-up delay-300">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-sm mb-6">
+                        <!-- Leaf SVG -->
+                        <svg class="w-10 h-10 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 22c1.25-.97 2.58-2.81 4-5"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-forest mb-3">Cero Esfuerzo Operativo</h3>
+                    <p class="text-gray-600">Nos encargamos de la siembra, mantenimiento, cosecha y comercialización. Usted solo monitorea y recibe utilidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE ROI CALCULATOR -->
+    <section id="calculator" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-forest rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden anim-fade-up">
+                <!-- Decorative background element -->
+                <div class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-gold rounded-full opacity-10 blur-3xl"></div>
+                
+                <div class="text-center mb-10 relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Simulador de Rendimiento</h2>
+                    <p class="text-gold">Descubra el poder del interés compuesto agrícola.</p>
+                </div>
+
+                <div class="bg-white/10 p-6 md:p-8 rounded-2xl backdrop-blur-sm relative z-10">
+                    <div class="mb-8">
+                        <label class="flex justify-between text-white font-semibold mb-4">
+                            <span>Número de Certificados de Plantación</span>
+                            <span class="text-gold text-xl font-bold" id="certCountDisplay">2</span>
+                        </label>
+                        <input type="range" id="certSlider" min="1" max="20" value="2" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer accent-gold">
+                        <div class="flex justify-between text-gray-400 text-xs mt-2">
+                            <span>1</span>
+                            <span>10</span>
+                            <span>20</span>
+                        </div>
+                    </div>
+
+                    <!-- Escenarios de Rendimiento -->
+                    <div class="mb-8">
+                        <p class="text-white font-semibold mb-4 text-left">Escenario de Rendimiento Anual</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                            <button type="button" class="rate-btn bg-gold text-white border-gold py-3 rounded-xl text-sm font-bold transition-all border-2 shadow-lg" data-rate="0.18">
+                                Conservador (18%)
+                            </button>
+                            <button type="button" class="rate-btn bg-white/10 text-gray-300 border-transparent hover:bg-white/20 hover:border-gold/50 py-3 rounded-xl text-sm font-bold transition-all border-2" data-rate="0.20">
+                                Medio (20%)
+                            </button>
+                            <button type="button" class="rate-btn bg-white/10 text-gray-300 border-transparent hover:bg-white/20 hover:border-gold/50 py-3 rounded-xl text-sm font-bold transition-all border-2" data-rate="0.22">
+                                Alto (22%)
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white p-6 rounded-xl text-center">
+                            <p class="text-gray-500 text-sm font-semibold uppercase tracking-wide mb-2">Inversión Inicial Estimada</p>
+                            <p class="text-3xl font-bold text-forest" id="totalInvDisplay">$620,000</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-gold to-goldHover p-6 rounded-xl text-center shadow-lg transform scale-105">
+                            <p class="text-white/90 text-sm font-semibold uppercase tracking-wide mb-2">Rendimiento Proyectado (5 Años)</p>
+                            <p class="text-3xl font-bold text-white" id="projReturnDisplay">$558,000</p>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-400 text-xs text-center mb-6">
+                        * Las cifras son proyecciones ilustrativas basadas en históricos de producción y precio de exportación. No garantizan rendimientos futuros.
+                    </p>
+
+                    <div class="text-center">
+                        <a href="#hero-form" class="inline-block bg-gold text-white hover:bg-goldHover px-8 py-3 rounded-full text-lg font-bold transition-all shadow-[0_0_20px_rgba(187,155,84,0.4)] hover:shadow-[0_0_30px_rgba(187,155,84,0.6)]">
+                            Empiece a Invertir
+                        </a>
+                        <p class="text-gold font-bold mt-5 text-sm animate-pulse tracking-wide">
+                            🔥 Solo quedan 12 certificados disponibles para la Etapa Jaguar IV
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA EL MODELO CITRUS -->
+    <section class="py-20 bg-gray-50 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                <div class="lg:w-2/3 anim-slide-left">
+                    <div class="inline-block bg-forest text-gold px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide mb-6 uppercase">
+                        El Proceso Paso a Paso
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-forest mb-6">¿Cómo funciona el Modelo Citrus?</h2>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        Nuestro modelo está diseñado para que usted invierta como los grandes fondos institucionales. Usted aporta el capital, nosotros ponemos la tierra a producir y exportamos al mundo.
+                    </p>
+                    
+                    <ul class="space-y-6 mb-8">
+                        <li class="flex items-start">
+                            <span class="bg-forest text-gold w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0 border border-gold/30 shadow-md">1</span>
+                            <div>
+                                <h4 class="text-forest font-bold text-lg">Consulta Estratégica</h4>
+                                <p class="text-gray-600 text-sm mt-1">Definimos su meta patrimonial.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-forest text-gold w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0 border border-gold/30 shadow-md">2</span>
+                            <div>
+                                <h4 class="text-forest font-bold text-lg">Blindaje Legal</h4>
+                                <p class="text-gray-600 text-sm mt-1">Firma de certificados ante notario.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-forest text-gold w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0 border border-gold/30 shadow-md">3</span>
+                            <div>
+                                <h4 class="text-forest font-bold text-lg">Activación de Activo</h4>
+                                <p class="text-gray-600 text-sm mt-1">Se plantan sus árboles y se espera a que empiecen a dar frutos.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-forest text-gold w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0 border border-gold/30 shadow-md">4</span>
+                            <div>
+                                <h4 class="text-forest font-bold text-lg">Cosecha y Exportación</h4>
+                                <p class="text-gray-600 text-sm mt-1">Se comercializa el limón persa en el mercado de EE.UU., asegurando precios en dólares y alta demanda.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-forest text-gold w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0 border border-gold/30 shadow-md">5</span>
+                            <div>
+                                <h4 class="text-forest font-bold text-lg">Reparto de Ganancias</h4>
+                                <p class="text-gray-600 text-sm mt-1">Reciba sus utilidades en moneda fuerte.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="lg:w-1/3 w-full flex justify-center anim-slide-right">
+                    <!-- Video Container (Vertical 9:16 Layout) -->
+                    <div class="relative w-full max-w-[340px] rounded-[2.5rem] overflow-hidden shadow-2xl border-[6px] border-forest bg-forest p-1 aspect-[9/16]">
+                        <video 
+                            controls 
+                            preload="none" 
+                            playsinline
+                            poster="modelo-citrus-poster.webp" 
+                            width="340" 
+                            height="604"
+                            class="w-full h-full object-cover rounded-[2rem]">
+                            <source src="modelo-citrus.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <!-- Etiqueta sobre el video -->
+                        <div class="absolute top-6 left-1/2 transform -translate-x-1/2 bg-forest/90 backdrop-blur-sm text-gold px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg flex items-center whitespace-nowrap z-10 pointer-events-none">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                            Descubra el Modelo
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTHORITY & TRUST -->
+    <section id="authority" class="py-20 bg-forest text-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="anim-fade-up">
+                <p class="text-gold font-semibold tracking-wider uppercase mb-4">Respaldo y Solidez</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-12">Un Proyecto Validado por los Expertos</h2>
+                
+                <!-- Logos Mockup -->
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 mb-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                    <span class="text-2xl md:text-3xl font-serif font-bold tracking-tighter">MILENIO</span>
+                    <span class="text-2xl md:text-3xl font-sans font-bold italic">Expansión</span>
+                    <span class="text-2xl md:text-3xl font-serif font-bold uppercase tracking-widest">FORBES</span>
+                    <span class="text-xl md:text-2xl font-sans font-black tracking-tight">Dimes y Billetes</span>
+                </div>
+
+                <!-- Expert Photo Validation -->
+                <div class="max-w-[631px] mx-auto anim-fade-up delay-100">
+                    <div class="relative rounded-3xl overflow-hidden border border-gold/20 shadow-[0_10px_40px_rgba(0,0,0,0.5)] group">
+                        <img src="moris-y-rodrigo.jpeg" alt="Validación Financiera" loading="lazy" width="631" height="813" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-[#111b16] via-[#111b16]/80 to-transparent p-6 md:p-8 pt-24 text-left">
+                            <p class="text-gold font-bold text-xl md:text-2xl mb-1">Validación del Modelo Financiero</p>
+                            <p class="text-gray-300 text-sm md:text-base max-w-2xl">
+                                Expertos en finanzas y negocios analizando la disrupción y seguridad patrimonial que el ecosistema Citrus ofrece al inversionista moderno.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA & SCARCITY -->
+    <section id="cta" class="py-24 bg-white relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-forest via-gold to-forest"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 mt-4 md:mt-0">
+            <div class="bg-gray-50 border-2 border-forest/10 rounded-3xl p-6 md:p-12 text-center shadow-2xl relative anim-fade-up">
+                <div class="absolute -top-5 md:-top-6 left-1/2 transform -translate-x-1/2 bg-gold text-white px-4 md:px-6 py-1.5 md:py-2 rounded-full font-bold shadow-lg flex items-center whitespace-nowrap text-xs md:text-base w-max max-w-[90%]">
+                    <!-- Clock SVG -->
+                    <svg class="w-4 h-4 md:w-5 md:h-5 mr-1.5 md:mr-2 animate-pulse flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Cierre de Etapa Próximo
+                </div>
+
+                <h2 class="text-3xl md:text-5xl font-extrabold text-forest mb-6 mt-4 md:mt-6">
+                    Asegure su Lugar en <br/><span class="text-gold">Etapa Jaguar IV</span>
+                </h2>
+                
+                <div class="mb-8">
+                    <div class="flex justify-between text-sm font-bold text-gray-600 mb-2">
+                        <span>Certificados Disponibles</span>
+                        <span class="text-red-600">85% Suscrito</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                        <div class="bg-red-600 h-full rounded-full progress-bar-animated" style="width: 85%;"></div>
+                    </div>
+                </div>
+
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Cada día más inversionistas aseguran su participación como dueños de este activo, y la disponibilidad se agota rápidamente. Esperar a una futura fase significa <strong>retrasar el inicio de sus utilidades por años</strong>. Asegure su lugar en la <strong>Etapa Jaguar IV</strong> hoy mismo y complete el formulario para recibir su <strong>Proyección Financiera</strong>.
+                </p>
+
+                <a href="#hero-form" class="inline-flex w-full sm:w-auto bg-forest hover:bg-[#2a4236] text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg justify-center items-center group">
+                    Ir al Formulario para Cotizar
+                    <svg class="ml-2 w-5 h-5 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-forest text-white/60 py-8 text-center border-t border-white/10 pb-28 md:pb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Leaf SVG -->
+            <svg class="w-8 h-8 text-gold mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 22c1.25-.97 2.58-2.81 4-5"></path></svg>
+            <p class="mb-2">© 2026 Paola Maas | Asesora en Inversiones. Todos los derechos reservados.</p>
+            <p class="text-xs max-w-2xl mx-auto">La información aquí presentada es de carácter ilustrativo. Las proyecciones financieras están basadas en análisis de mercado y no representan una garantía absoluta de rendimiento. Todo proyecto de inversión conlleva riesgos implícitos.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL DE ÉXITO (Oculto por defecto) -->
+    <div id="successModal" class="fixed inset-0 z-[100] flex items-center justify-center hidden">
+        <!-- Fondo oscuro con blur -->
+        <div class="absolute inset-0 bg-forest/90 backdrop-blur-sm transition-opacity opacity-0 duration-300" id="modalOverlay"></div>
+        
+        <!-- Tarjeta del Modal -->
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl transform scale-95 opacity-0 transition-all duration-300 relative z-10" id="modalContent">
+            <!-- Icono de Check -->
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 shadow-inner">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-forest text-center mb-2">¡Solicitud Exitosa!</h3>
+            <p class="text-gray-600 text-center mb-6">Hemos recibido tus datos de forma segura. Para agilizar tu proceso y entregarte tu <strong>Proyección Financiera</strong> de inmediato, puedes hablar directamente con tu asesora por WhatsApp.</p>
+            
+            <!-- Botón WhatsApp -->
+            <a href="#" id="waRedirectBtn" target="_blank" class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3.5 rounded-xl text-lg font-bold transition-all shadow-[0_0_15px_rgba(37,211,102,0.4)] flex justify-center items-center mb-3 group">
+                <svg class="w-6 h-6 mr-2 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 001.944 6.556L0 24l5.667-1.722A11.956 11.956 0 0011.944 24c6.611 0 12-5.389 12-12S18.556 0 11.944 0zM12 21.833a9.84 9.84 0 01-5.056-1.389l-.389-.222-3.722 1.111 1.056-3.556-.278-.444A9.85 9.85 0 012.111 12C2.111 6.556 6.556 2.111 12 2.111c5.444 0 9.889 4.444 9.889 9.889S17.444 21.833 12 21.833zm5.444-7.389c-.278-.167-1.667-.833-1.889-.944-.222-.111-.389-.167-.556.111-.167.278-.722.944-.889 1.111-.167.167-.333.222-.611.056-.278-.167-1.167-.444-2.222-1.222-.833-.611-1.389-1.389-1.556-1.667-.167-.278-.056-.444.111-.556.111-.111.278-.333.444-.5.167-.167.222-.278.333-.444.111-.167.056-.333 0-.444-.111-.111-.722-1.722-1-2.333-.222-.611-.444-.556-.611-.556h-.5c-.222 0-.556.056-.889.389C6.889 7.722 6 8.667 6 10.611c0 1.944 1.333 3.833 1.5 4.056.167.222 2.778 4.222 6.722 5.944.944.389 1.667.667 2.222.833.944.278 1.833.222 2.5.111.722-.111 2.278-.889 2.611-1.778.333-.889.333-1.667.222-1.778-.167-.111-.333-.167-.611-.333z"/></svg>
+                Continuar en WhatsApp
+            </a>
+            
+            <!-- Botón Cerrar / Esperar -->
+            <button type="button" id="closeModalBtn" class="w-full bg-transparent text-gray-500 hover:text-forest px-6 py-3 rounded-xl text-sm font-semibold transition-all">
+                Prefiero esperar a que me llamen
+            </button>
+        </div>
+    </div>
+
+    <!-- BOTÓN FLOTANTE (Oculto por defecto) -->
+    <div id="floating-cta" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 transition duration-500 translate-y-32 opacity-0 pointer-events-none w-full max-w-sm px-4">
+        <a href="#hero-form" class="w-full bg-gold hover:bg-goldHover text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-[0_10px_25px_rgba(187,155,84,0.6)] flex justify-center items-center">
+            Empiece a Invertir
+            <svg class="ml-2 w-5 h-5 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+        </a>
+    </div>
+
+    <!-- INTERACTIVITY & LOGIC SCRIPTS -->
+    <script>
+        // 1. Calculator Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const certSlider = document.getElementById('certSlider');
+            const certCountDisplay = document.getElementById('certCountDisplay');
+            const totalInvDisplay = document.getElementById('totalInvDisplay');
+            const projReturnDisplay = document.getElementById('projReturnDisplay');
+            const rateButtons = document.querySelectorAll('.rate-btn');
+            
+            const pricePerCertificate = 310000;
+            let annualReturnRate = 0.18; // Default rate
+
+            // Forzamos el slider a 1 al cargar la página por si el navegador lo cacheó
+            certSlider.value = 1;
+
+            const formatCurrency = (value) => {
+                return new Intl.NumberFormat('es-MX', {
+                    style: 'currency',
+                    currency: 'MXN',
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0
+                }).format(value);
+            };
+
+            const calculateReturns = () => {
+                const certificates = parseInt(certSlider.value);
+                const totalInvestment = certificates * pricePerCertificate;
+                const annualReturn = totalInvestment * annualReturnRate;
+                const fiveYearReturn = annualReturn * 5;
+
+                certCountDisplay.textContent = certificates;
+                totalInvDisplay.textContent = formatCurrency(totalInvestment);
+                projReturnDisplay.textContent = formatCurrency(fiveYearReturn);
+            };
+
+            // Rate Buttons Logic
+            rateButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    // Actualizar la tasa
+                    annualReturnRate = parseFloat(e.currentTarget.getAttribute('data-rate'));
+                    
+                    // Reiniciar estilos de todos los botones
+                    rateButtons.forEach(b => {
+                        b.classList.remove('bg-gold', 'text-white', 'border-gold', 'shadow-lg');
+                        b.classList.add('bg-white/10', 'text-gray-300', 'border-transparent', 'hover:bg-white/20', 'hover:border-gold/50');
+                    });
+                    
+                    // Aplicar estilo activo al botón seleccionado
+                    e.currentTarget.classList.remove('bg-white/10', 'text-gray-300', 'border-transparent', 'hover:bg-white/20', 'hover:border-gold/50');
+                    e.currentTarget.classList.add('bg-gold', 'text-white', 'border-gold', 'shadow-lg');
+                    
+                    // Recalcular
+                    calculateReturns();
+                });
+            });
+
+            certSlider.addEventListener('input', calculateReturns);
+            calculateReturns(); // Initialize values on load
+        });
+
+        // Generar Event ID y obtener Datos del Cliente para Meta CAPI
+        const generateEventId = () => 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        const currentEventId = generateEventId();
+
+        // Función para leer cookies (para capturar _fbp y _fbc de Meta)
+        const getCookie = (name) => {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+            return '';
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // Asignar Event ID, User Agent y Cookies de Meta al cargar
+            document.getElementById('eventId').value = currentEventId;
+            document.getElementById('userAgent').value = navigator.userAgent;
+            document.getElementById('fbp').value = getCookie('_fbp');
+            document.getElementById('fbc').value = getCookie('_fbc');
+            
+            // Obtener IP del cliente de forma asíncrona (No bloquea la carga de la página)
+            fetch('https://api.ipify.org?format=json')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('clientIp').value = data.ip;
+                })
+                .catch(err => console.error('Error al obtener IP:', err));
+        });
+
+        // 2. Form Submit & Webhook & WhatsApp Redirect Logic
+        document.getElementById('leadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Cambiar estado del botón a "cargando"
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<svg class="animate-spin h-5 w-5 mr-3 inline" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Procesando...';
+            submitBtn.disabled = true;
+
+            // Capturar los valores del formulario
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const budget = document.getElementById('budget').value;
+
+            // Capturar valores ocultos para la CAPI
+            const eventId = document.getElementById('eventId').value || currentEventId;
+            const clientIp = document.getElementById('clientIp').value;
+            const userAgent = document.getElementById('userAgent').value;
+            const fbp = document.getElementById('fbp').value || getCookie('_fbp');
+            const fbc = document.getElementById('fbc').value || getCookie('_fbc');
+
+            // 0. Disparar evento Pixel de Meta en el Front-End (Con EventID para deduplicar)
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', { value: budget, currency: 'MXN' }, { eventID: eventId });
+            }
+
+            // 1. Enviar datos al Webhook de Make.com
+            try {
+                await fetch('https://hook.us2.make.com/qyhpbnt2zin74gnlo9m71mtgogytu493', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        nombre: name,
+                        telefono: '+52' + phone,
+                        presupuesto: budget,
+                        origen: 'Landing Page Citrus Patrimonial',
+                        eventId: eventId,
+                        clientIp: clientIp,
+                        userAgent: userAgent,
+                        fbp: fbp,
+                        fbc: fbc
+                    })
+                });
+            } catch (error) {
+                console.error('Error al enviar webhook a Make:', error);
+                // El error se ignora silenciosamente para no interrumpir el flujo
+            }
+
+            // 2. Preparar enlace de WhatsApp y mostrar Modal de Éxito
+            const mensaje = encodeURIComponent(`¡Hola Paola! Soy ${name}. Llené el formulario en la landing page y me gustaría agendar una sesión estratégica para recibir mi proyección financiera.`);
+            const waUrl = `https://wa.me/529997435444?text=${mensaje}`;
+            
+            const successModal = document.getElementById('successModal');
+            const modalOverlay = document.getElementById('modalOverlay');
+            const modalContent = document.getElementById('modalContent');
+            const waRedirectBtn = document.getElementById('waRedirectBtn');
+
+            // Setear la URL de WhatsApp generada al botón del modal
+            waRedirectBtn.href = waUrl;
+
+            // Restaurar botón del formulario y limpiar inputs
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+            e.target.reset(); 
+
+            // Mostrar Modal con animación suave
+            successModal.classList.remove('hidden');
+            
+            // Pequeño retraso para permitir que el display:block se aplique antes de la transición
+            setTimeout(() => {
+                modalOverlay.classList.remove('opacity-0');
+                modalOverlay.classList.add('opacity-100');
+                modalContent.classList.remove('opacity-0', 'scale-95');
+                modalContent.classList.add('opacity-100', 'scale-100');
+            }, 10);
+        });
+
+        // Lógica para cerrar el modal
+        const closeModal = () => {
+            const successModal = document.getElementById('successModal');
+            const modalOverlay = document.getElementById('modalOverlay');
+            const modalContent = document.getElementById('modalContent');
+
+            modalOverlay.classList.remove('opacity-100');
+            modalOverlay.classList.add('opacity-0');
+            modalContent.classList.remove('opacity-100', 'scale-100');
+            modalContent.classList.add('opacity-0', 'scale-95');
+
+            setTimeout(() => {
+                successModal.classList.add('hidden');
+            }, 300); // Esperar a que termine la transición para ocultarlo del DOM
+        };
+
+        // Eventos para cerrar el modal
+        document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+        document.getElementById('waRedirectBtn').addEventListener('click', closeModal); // Cierra el modal de fondo si hacen clic para ir a WA
+
+        // 3. Native Intersection Observer for fast scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.anim-fade-up, .anim-slide-left, .anim-slide-right');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, {
+                threshold: 0.1, // Trigger when 10% of element is visible
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            animatedElements.forEach(el => observer.observe(el));
+        });
+
+        // 4. Floating CTA Logic (Aparece al pasar la calculadora y se ancla justo antes del formulario final)
+        document.addEventListener('DOMContentLoaded', () => {
+            const floatingCta = document.getElementById('floating-cta');
+            const calculatorSection = document.getElementById('calculator');
+            const ctaSection = document.getElementById('cta');
+            let isScrolling = false;
+
+            window.addEventListener('scroll', () => {
+                if (!calculatorSection || !ctaSection) return;
+
+                if (!isScrolling) {
+                    window.requestAnimationFrame(() => {
+                        const calcBottom = calculatorSection.offsetTop + calculatorSection.offsetHeight;
+                        const ctaTop = ctaSection.offsetTop;
+                        const viewportBottom = window.scrollY + window.innerHeight;
+
+                        // Si pasamos la calculadora hacia abajo, mostramos el botón
+                        if (window.scrollY > calcBottom) {
+                            floatingCta.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+                            floatingCta.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+
+                            // Lógica para que se quede estático al llegar a la sección final (Formulario)
+                            if (viewportBottom >= ctaTop) {
+                                floatingCta.classList.remove('fixed');
+                                floatingCta.classList.add('absolute');
+                                // Lo anclamos exactamente donde toca el inicio de la sección CTA (menos su margen bottom)
+                                floatingCta.style.top = `${ctaTop - floatingCta.offsetHeight - 24}px`;
+                                floatingCta.style.bottom = 'auto';
+                            } else {
+                                // Mantenerlo fijo flotando en la pantalla
+                                floatingCta.classList.add('fixed');
+                                floatingCta.classList.remove('absolute');
+                                floatingCta.style.top = 'auto';
+                                floatingCta.style.bottom = '1.5rem'; // bottom-6
+                            }
+                        } else {
+                            // Si regresamos arriba de la calculadora, lo ocultamos
+                            floatingCta.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+                            floatingCta.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                            
+                            // Resetear a fixed para el siguiente scroll
+                            floatingCta.classList.add('fixed');
+                            floatingCta.classList.remove('absolute');
+                            floatingCta.style.top = 'auto';
+                            floatingCta.style.bottom = '1.5rem';
+                        }
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
+                }
+            }, { passive: true });
+        });
+    </script>
+</body>
+</html>
