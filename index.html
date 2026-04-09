@@ -46,10 +46,8 @@
         }
     </style>
 </head>
-<body class="bg-stone-50 font-sans text-stone-800 selection:bg-amber-200 selection:text-stone-900 pb-20 md:pb-0">
+<body class="bg-stone-50 font-sans text-stone-800 selection:bg-amber-200 selection:text-stone-900 pb-28 md:pb-24">
 
-    <!-- WhatsApp Links (Configured via JS below) -->
-    
     <!-- --- HEADER --- -->
     <header id="mainHeader" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent py-5">
         <div class="container mx-auto px-6 flex justify-between items-center">
@@ -88,37 +86,39 @@
     </header>
 
     <!-- --- HERO SECTION (Attention) --- -->
-    <section class="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-[100svh] flex items-center justify-center overflow-hidden pb-16 md:pb-0">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
             <img src="playa-las-dunas-chuburna.webp" alt="Playa Las Dunas Chuburná" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70"></div>
         </div>
 
-        <div class="relative z-10 container mx-auto px-6 text-center mt-16">
-            <div class="inline-block mb-4 px-4 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white/90 text-xs font-semibold tracking-wider uppercase">
+        <div class="relative z-10 container mx-auto px-6 text-center mt-20">
+            <div class="inline-block mb-4 px-4 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white/90 text-[10px] sm:text-xs font-semibold tracking-wider uppercase">
                 Chuburná Puerto, Yucatán
             </div>
-            <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-lg">
-                El Secreto Mejor <br class="hidden md:block"/> Guardado de la Costa
+            
+            <!-- Título ajustado para móviles: text-4xl en vez de 5xl, line-height ajustado -->
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight md:leading-tight drop-shadow-lg max-w-4xl mx-auto">
+                El Secreto Mejor Guardado de la Costa
             </h1>
-            <p class="text-lg md:text-xl text-stone-200 mb-10 max-w-2xl mx-auto font-light drop-shadow-md">
-                Vibras de Bali, confort moderno y el precio más inteligente. <br class="hidden md:block"/>
-                Tu refugio privado a unos pasos del mar.
+            
+            <p class="text-base md:text-xl text-stone-200 mb-10 max-w-2xl mx-auto font-light drop-shadow-md">
+                Vibras de Bali, confort moderno y el precio más inteligente. Tu refugio privado a unos pasos del mar.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#" class="wa-estancia w-full sm:w-auto bg-amber-600 hover:bg-amber-500 text-white px-8 py-4 rounded-full text-lg font-bold transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(217,119,6,0.4)] flex items-center justify-center gap-2">
+                <a href="#" class="wa-estancia w-full sm:w-auto bg-amber-600 hover:bg-amber-500 text-white px-6 py-4 rounded-full text-base sm:text-lg font-bold transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(217,119,6,0.4)] flex items-center justify-center gap-2">
                     <i data-lucide="moon" class="w-5 h-5"></i>
                     Cabañas desde $1,200
                 </a>
-                <a href="#" class="wa-daypass w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/50 text-white px-8 py-4 rounded-full text-lg font-bold transition-all flex items-center justify-center gap-2">
+                <a href="#" class="wa-daypass w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/50 text-white px-6 py-4 rounded-full text-base sm:text-lg font-bold transition-all flex items-center justify-center gap-2">
                     <i data-lucide="sun" class="w-5 h-5"></i>
                     Day Pass $500/pareja
                 </a>
             </div>
 
-            <div class="mt-12 flex items-center justify-center gap-2 text-white/80 text-sm font-medium animate-pulse">
+            <div class="mt-12 flex items-center justify-center gap-2 text-white/80 text-xs sm:text-sm font-medium">
                 <i data-lucide="wind" class="w-4 h-4 text-cyan-300"></i>
                 Aire Acondicionado Garantizado en todas las cabañas
             </div>
@@ -127,89 +127,89 @@
 
     <!-- --- INTERACTIVE SELECTOR (Interest) --- -->
     <section id="experiencia" class="py-20 bg-stone-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10">
                 <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-800 mb-4">Elige tu Nivel de Desconexión</h2>
-                <p class="text-stone-600 max-w-2xl mx-auto">Ya sea que busques escapar el fin de semana o solo recargar energía por un día, tenemos el espacio perfecto sin que te cueste una fortuna.</p>
+                <p class="text-stone-600 max-w-2xl mx-auto text-sm sm:text-base">Ya sea que busques escapar el fin de semana o solo recargar energía por un día, tenemos el espacio perfecto sin que te cueste una fortuna.</p>
             </div>
 
-            <!-- Toggle Buttons -->
-            <div class="flex justify-center mb-10">
-                <div class="bg-white p-1 rounded-full shadow-sm inline-flex border border-stone-200 relative">
-                    <button id="btn-estancia" class="px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all bg-amber-600 text-white shadow-md z-10">
+            <!-- Toggle Buttons (Ajustados para móvil) -->
+            <div class="flex justify-center mb-10 w-full">
+                <div class="bg-white p-1 rounded-2xl sm:rounded-full shadow-sm flex flex-row w-full max-w-md border border-stone-200">
+                    <button id="btn-estancia" class="flex-1 px-2 py-3 sm:px-6 sm:py-3 rounded-xl sm:rounded-full text-[13px] sm:text-base font-semibold transition-all bg-amber-600 text-white shadow-md z-10 leading-tight flex items-center justify-center text-center">
                         Escapada de Noche
                     </button>
-                    <button id="btn-daypass" class="px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all text-stone-500 hover:text-stone-800 z-10">
+                    <button id="btn-daypass" class="flex-1 px-2 py-3 sm:px-6 sm:py-3 rounded-xl sm:rounded-full text-[13px] sm:text-base font-semibold transition-all text-stone-500 hover:text-stone-800 z-10 leading-tight flex items-center justify-center text-center">
                         Día de Alberca (Day Pass)
                     </button>
                 </div>
             </div>
 
-            <!-- Tab Content Wrapper -->
-            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden transition-all duration-500 relative min-h-[400px]">
+            <!-- Tab Content Wrapper (Corregido el error de absolute inset-0 y min-height) -->
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden transition-all duration-500">
                 
                 <!-- ESTANCIA CONTENT -->
-                <div id="content-estancia" class="flex flex-col md:flex-row fade-in absolute inset-0">
-                    <div class="md:w-1/2 h-64 md:h-full relative">
+                <div id="content-estancia" class="flex flex-col md:flex-row fade-in w-full">
+                    <div class="md:w-1/2 h-64 md:h-auto relative shrink-0">
                         <img src="cabañas-maktub.webp" alt="Exterior de las cabañas" class="w-full h-full object-cover" />
                         <div class="absolute top-4 left-4 bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-md">
                             Más Popular
                         </div>
                     </div>
-                    <div class="md:w-1/2 p-8 md:p-10 flex flex-col justify-center bg-white h-full">
+                    <div class="md:w-1/2 p-6 sm:p-8 md:p-10 flex flex-col justify-center bg-white">
                         <h3 class="text-2xl font-serif font-bold text-stone-800 mb-2">Tu Refugio Rústico-Chic</h3>
                         <div class="text-3xl font-bold text-amber-600 mb-6">$1,200 <span class="text-sm text-stone-500 font-normal">MXN / noche</span></div>
                         
                         <ul class="space-y-4 mb-8">
                             <li class="flex items-start gap-3">
                                 <i data-lucide="wind" class="w-5 h-5 text-cyan-600 shrink-0 mt-0.5"></i>
-                                <span class="text-stone-600"><strong class="text-stone-800">Clima Perfecto:</strong> Aire acondicionado mini-split (¡vital en la costa!).</span>
+                                <span class="text-stone-600 text-sm sm:text-base"><strong class="text-stone-800">Clima Perfecto:</strong> Aire acondicionado mini-split (¡vital en la costa!).</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <i data-lucide="moon" class="w-5 h-5 text-indigo-600 shrink-0 mt-0.5"></i>
-                                <span class="text-stone-600"><strong class="text-stone-800">Descanso Profundo:</strong> Cama Queen ultra cómoda y baño privado.</span>
+                                <span class="text-stone-600 text-sm sm:text-base"><strong class="text-stone-800">Descanso Profundo:</strong> Cama Queen ultra cómoda y baño privado.</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <i data-lucide="star" class="w-5 h-5 text-amber-500 shrink-0 mt-0.5"></i>
-                                <span class="text-stone-600"><strong class="text-stone-800">Acceso Total:</strong> Uso libre de alberca, bar y áreas comunes.</span>
+                                <span class="text-stone-600 text-sm sm:text-base"><strong class="text-stone-800">Acceso Total:</strong> Uso libre de alberca, bar y áreas comunes.</span>
                             </li>
                         </ul>
                         
                         <a href="#" class="wa-estancia w-full block text-center bg-stone-900 hover:bg-stone-800 text-white py-3 rounded-xl font-bold transition-colors">
                             Verificar Disponibilidad
                         </a>
-                        <p class="text-center text-xs text-red-500 font-medium mt-3">🔥 Últimas cabañas para este fin de semana</p>
+                        <p class="text-center text-[11px] sm:text-xs text-red-500 font-medium mt-3">🔥 Últimas cabañas para este fin de semana</p>
                     </div>
                 </div>
 
                 <!-- DAY PASS CONTENT -->
-                <div id="content-daypass" class="flex flex-col md:flex-row fade-in absolute inset-0 hidden opacity-0 pointer-events-none">
-                    <div class="md:w-1/2 h-64 md:h-full relative">
-                        <img src="entrada-maktub.webp" alt="Entrada y áreas comunes para el Day Pass" class="w-full h-full object-cover" />
+                <div id="content-daypass" class="hidden flex-col md:flex-row fade-in w-full opacity-0 pointer-events-none">
+                    <div class="md:w-1/2 h-64 md:h-auto relative shrink-0">
+                        <img src="entrada_maktub.webp" alt="Entrada y áreas comunes para el Day Pass" class="w-full h-full object-cover" />
                     </div>
-                    <div class="md:w-1/2 p-8 md:p-10 flex flex-col justify-center bg-white h-full">
+                    <div class="md:w-1/2 p-6 sm:p-8 md:p-10 flex flex-col justify-center bg-white">
                         <h3 class="text-2xl font-serif font-bold text-stone-800 mb-2">Oasis por un Día</h3>
                         <div class="text-3xl font-bold text-cyan-600 mb-6">$500 <span class="text-sm text-stone-500 font-normal">MXN / pareja</span></div>
                         
                         <ul class="space-y-4 mb-8">
                             <li class="flex items-start gap-3">
                                 <i data-lucide="sun" class="w-5 h-5 text-amber-500 shrink-0 mt-0.5"></i>
-                                <span class="text-stone-600"><strong class="text-stone-800">Alberca Aesthetic:</strong> Relájate bajo el sol con vibras tropicales.</span>
+                                <span class="text-stone-600 text-sm sm:text-base"><strong class="text-stone-800">Alberca Aesthetic:</strong> Relájate bajo el sol con vibras tropicales.</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <i data-lucide="glass-water" class="w-5 h-5 text-pink-500 shrink-0 mt-0.5"></i>
-                                <span class="text-stone-600"><strong class="text-stone-800">Servicio de Bar:</strong> Cocktails y snacks directo a tu camastro.</span>
+                                <span class="text-stone-600 text-sm sm:text-base"><strong class="text-stone-800">Servicio de Bar:</strong> Cocktails y snacks directo a tu camastro.</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <i data-lucide="coffee" class="w-5 h-5 text-stone-700 shrink-0 mt-0.5"></i>
-                                <span class="text-stone-600"><strong class="text-stone-800">Zona de Hamacas:</strong> El spot perfecto para tu foto de Instagram.</span>
+                                <span class="text-stone-600 text-sm sm:text-base"><strong class="text-stone-800">Zona de Hamacas:</strong> El spot perfecto para tu foto de Instagram.</span>
                             </li>
                         </ul>
                         
                         <a href="#" class="wa-daypass w-full block text-center bg-cyan-600 hover:bg-cyan-700 text-white py-3 rounded-xl font-bold transition-colors">
                             Reservar mi Lugar
                         </a>
-                        <p class="text-center text-xs text-stone-500 mt-3">Cupo limitado para garantizar tu tranquilidad.</p>
+                        <p class="text-center text-[11px] sm:text-xs text-stone-500 mt-3">Cupo limitado para garantizar tu tranquilidad.</p>
                     </div>
                 </div>
 
@@ -224,8 +224,8 @@
                 
                 <!-- Image Grid -->
                 <div class="grid grid-cols-2 gap-4">
-                    <img src="entrada-maktub.webp" alt="Entrada de Cabañas Maktub" class="w-full h-48 object-cover rounded-2xl rounded-tl-[3rem]" />
-                    <img src="cabañas-maktub2.webp" alt="Detalle interior de cabaña" class="w-full h-48 object-cover rounded-2xl mt-8" />
+                    <img src="entrada_maktub.webp" alt="Entrada de Cabañas Maktub" class="w-full h-48 object-cover rounded-2xl rounded-tl-[3rem]" />
+                    <img src="cabañar-maktub2.webp" alt="Detalle interior de cabaña" class="w-full h-48 object-cover rounded-2xl mt-8" />
                     <img src="alberca-maktub.webp" alt="Área de alberca y bar" class="w-full h-48 object-cover rounded-2xl rounded-bl-[3rem] -mt-8" />
                     <img src="hamacas.webp" alt="Zona de hamacas para relax" class="w-full h-48 object-cover rounded-2xl rounded-br-[3rem]" />
                 </div>
@@ -235,7 +235,7 @@
                     <h2 class="text-3xl md:text-4xl font-serif font-bold text-stone-800 mb-6">
                         El lujo de desconectarse, sin sacrificar confort.
                     </h2>
-                    <p class="text-stone-600 mb-8 text-lg">
+                    <p class="text-stone-600 mb-8 text-base md:text-lg">
                         Olvídate de las casas de playa sofocantes o de gastar una fortuna en hoteles genéricos. En Maktub hemos diseñado el equilibrio perfecto.
                     </p>
 
@@ -246,7 +246,7 @@
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold text-stone-800 mb-1">Aire Acondicionado Real</h4>
-                                <p class="text-stone-600">No ventiladores ruidosos. Un clima perfecto para dormir fresco después de un día de playa.</p>
+                                <p class="text-stone-600 text-sm md:text-base">No ventiladores ruidosos. Un clima perfecto para dormir fresco después de un día de playa.</p>
                             </div>
                         </div>
 
@@ -256,7 +256,7 @@
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold text-stone-800 mb-1">Ahorro Inteligente</h4>
-                                <p class="text-stone-600">Disfruta de instalaciones de primer nivel por una fracción del costo de un alojamiento frente al mar.</p>
+                                <p class="text-stone-600 text-sm md:text-base">Disfruta de instalaciones de primer nivel por una fracción del costo de un alojamiento frente al mar.</p>
                             </div>
                         </div>
 
@@ -266,7 +266,7 @@
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold text-stone-800 mb-1">Restaurante & Bar</h4>
-                                <p class="text-stone-600">No necesitas salir a buscar dónde comer. Todo lo que necesitas está en tu refugio.</p>
+                                <p class="text-stone-600 text-sm md:text-base">No necesitas salir a buscar dónde comer. Todo lo que necesitas está en tu refugio.</p>
                             </div>
                         </div>
                     </div>
@@ -284,7 +284,7 @@
 
         <div class="container mx-auto px-6 relative z-10 text-center">
             <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">A un paso de lo que importa</h2>
-            <p class="text-stone-400 max-w-xl mx-auto mb-16">Ubicados estratégicamente en la segunda línea, alejados del bullicio pero a minutos de la brisa marina.</p>
+            <p class="text-stone-400 max-w-xl mx-auto mb-16 text-sm md:text-base">Ubicados estratégicamente en la segunda línea, alejados del bullicio pero a minutos de la brisa marina.</p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm flex flex-col items-center hover:bg-white/10 transition-colors">
@@ -393,7 +393,7 @@
     </section>
 
     <!-- --- FOOTER --- -->
-    <footer class="bg-stone-900 text-stone-400 py-12 pb-32 md:pb-12 text-center text-sm">
+    <footer class="bg-stone-900 text-stone-400 py-12 pb-36 md:pb-24 text-center text-sm">
         <div class="container mx-auto px-6">
             <div class="flex justify-center items-center gap-2 mb-6 opacity-50">
                 <i data-lucide="sun" class="w-5 h-5 text-amber-500"></i>
@@ -405,19 +405,19 @@
     </footer>
 
     <!-- --- DIRECT CONVERSION BAR (Sticky Footer Mobile & Desktop) --- -->
-    <div class="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-lg border-t border-stone-200 p-3 md:p-4 z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+    <div class="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-lg border-t border-stone-200 p-3 pb-6 md:pb-4 z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
         <div class="container mx-auto flex flex-row justify-center gap-3">
             <a 
                 href="#" 
-                class="wa-estancia flex-1 max-w-[250px] bg-amber-600 hover:bg-amber-700 text-white py-3 px-2 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md"
+                class="wa-estancia flex-1 max-w-[250px] bg-amber-600 hover:bg-amber-700 text-white py-3 px-1 sm:px-2 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-1 sm:gap-2 transition-transform active:scale-95 shadow-md"
             >
-                Reservar Estancia <span class="text-lg">📲</span>
+                Reservar Estancia <span class="text-base sm:text-lg">📲</span>
             </a>
             <a 
                 href="#" 
-                class="wa-daypass flex-1 max-w-[250px] bg-stone-100 hover:bg-stone-200 text-stone-800 border border-stone-300 py-3 px-2 rounded-xl text-sm font-bold flex items-center justify-center gap-2 transition-transform active:scale-95"
+                class="wa-daypass flex-1 max-w-[250px] bg-stone-100 hover:bg-stone-200 text-stone-800 border border-stone-300 py-3 px-1 sm:px-2 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-1 sm:gap-2 transition-transform active:scale-95"
             >
-                Comprar Day Pass <span class="text-lg">🍹</span>
+                Comprar Day Pass <span class="text-base sm:text-lg">🍹</span>
             </a>
         </div>
     </div>
@@ -428,14 +428,14 @@
         lucide.createIcons();
 
         // 1. WhatsApp Configuration
-        const waNumber = "529992734579"; // Reemplazar con el número real
+        const waNumber = "529990000000"; // Reemplazar con el número real
         const waMessageEstancia = "Hola Maktub! Me interesa reservar una cabaña con AC. ¿Tienen disponibilidad?";
         const waMessageDayPass = "Hola Maktub! Quiero información sobre el Day Pass para disfrutar de la alberca.";
 
         const waLinkEstancia = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessageEstancia)}`;
         const waLinkDayPass = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessageDayPass)}`;
 
-        // Asignar links a todos los botones correspondientes
+        // Asignar links a todos los botones
         document.querySelectorAll('.wa-estancia').forEach(el => {
             el.href = waLinkEstancia;
             el.target = "_blank";
@@ -454,7 +454,6 @@
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                // Scrolled state
                 header.classList.remove('bg-transparent', 'py-5');
                 header.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-3');
                 
@@ -472,7 +471,6 @@
                     link.classList.add('text-stone-600');
                 });
             } else {
-                // Top state
                 header.classList.add('bg-transparent', 'py-5');
                 header.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm', 'py-3');
                 
@@ -503,7 +501,6 @@
                 mobileMenu.classList.remove('hidden');
                 mobileMenu.classList.add('flex');
                 menuIcon.setAttribute('data-lucide', 'x');
-                // Ensure icon color matches background state
                 if(window.scrollY <= 50) {
                      menuIcon.classList.remove('text-white');
                      menuIcon.classList.add('text-stone-800');
@@ -512,16 +509,14 @@
                 mobileMenu.classList.add('hidden');
                 mobileMenu.classList.remove('flex');
                 menuIcon.setAttribute('data-lucide', 'menu');
-                // Revert icon color if at top
                 if(window.scrollY <= 50) {
                      menuIcon.classList.add('text-white');
                      menuIcon.classList.remove('text-stone-800');
                 }
             }
-            lucide.createIcons(); // Re-render icon
+            lucide.createIcons();
         });
 
-        // Close mobile menu on link click
         document.querySelectorAll('.mobile-nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 isMenuOpen = false;
@@ -536,20 +531,26 @@
             });
         });
 
-        // 4. Tabs Logic (Estancia vs Day Pass)
+        // 4. Tabs Logic (Estancia vs Day Pass) - CORREGIDO PARA MÓVILES
         const btnEstancia = document.getElementById('btn-estancia');
         const btnDaypass = document.getElementById('btn-daypass');
         const contentEstancia = document.getElementById('content-estancia');
         const contentDaypass = document.getElementById('content-daypass');
 
+        // Clases base para los botones del selector
+        const baseBtnClasses = "flex-1 px-2 py-3 sm:px-6 sm:py-3 rounded-xl sm:rounded-full text-[13px] sm:text-base font-semibold transition-all z-10 leading-tight flex items-center justify-center text-center";
+
         btnEstancia.addEventListener('click', () => {
             // Update Buttons
-            btnEstancia.className = "px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all bg-amber-600 text-white shadow-md z-10";
-            btnDaypass.className = "px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all text-stone-500 hover:text-stone-800 z-10";
+            btnEstancia.className = baseBtnClasses + " bg-amber-600 text-white shadow-md";
+            btnDaypass.className = baseBtnClasses + " text-stone-500 hover:text-stone-800";
             
-            // Show/Hide Content
+            // Show/Hide Content (Cambiando 'hidden' y permitiendo flujo natural)
             contentEstancia.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+            contentEstancia.classList.add('flex');
+            
             contentDaypass.classList.add('hidden', 'opacity-0', 'pointer-events-none');
+            contentDaypass.classList.remove('flex');
             
             // Trigger animation
             contentEstancia.classList.remove('fade-in');
@@ -559,12 +560,15 @@
 
         btnDaypass.addEventListener('click', () => {
             // Update Buttons
-            btnDaypass.className = "px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all bg-cyan-600 text-white shadow-md z-10";
-            btnEstancia.className = "px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all text-stone-500 hover:text-stone-800 z-10";
+            btnDaypass.className = baseBtnClasses + " bg-cyan-600 text-white shadow-md";
+            btnEstancia.className = baseBtnClasses + " text-stone-500 hover:text-stone-800";
             
-            // Show/Hide Content
+            // Show/Hide Content (Cambiando 'hidden' y permitiendo flujo natural)
             contentDaypass.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+            contentDaypass.classList.add('flex');
+
             contentEstancia.classList.add('hidden', 'opacity-0', 'pointer-events-none');
+            contentEstancia.classList.remove('flex');
             
             // Trigger animation
             contentDaypass.classList.remove('fade-in');
